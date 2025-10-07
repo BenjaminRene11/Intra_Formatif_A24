@@ -40,7 +40,7 @@ export class AppComponent {
       if (!commentaire?.value || !nom?.value) {
         return null;
       }
-      // On fait notre validation
+      // On fait notre validation IMPORTANT: VALIDER QUE CEST BON ICI
       const estValide = !commentaire.value.includes(nom.value);
 
       if (!estValide) {
