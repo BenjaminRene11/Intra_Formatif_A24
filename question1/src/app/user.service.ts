@@ -29,6 +29,7 @@ export class UserService {
     this.route.navigate(['/login']);
   }
 
+  //Méthode appelée dans le guard
   isCatPrefered(){
     if(this.currentUser?.prefercat){
       return true

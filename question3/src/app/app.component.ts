@@ -17,9 +17,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 })
 export class AppComponent {
   title = 'reactive.form';
-
+  //Variable qui représente le Form
   formGroup: FormGroup;
 
+  //Set up les validations
   constructor(private formBuilder: FormBuilder) {
     this.formGroup = this.formBuilder.group({
       nom: ['', [Validators.required]],
@@ -27,6 +28,7 @@ export class AppComponent {
       codePostal: ['', Validators.pattern('^[A-Z][0-9][A-Z][ ]?[0-9][A-Z][0-9]$')],
       commentaire: ['', Validators.minLength(10)]
     },
+      //Mettre en haut de la paranthèse
       { validators: this.nomDansComment() }
     )
   }
